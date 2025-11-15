@@ -9,7 +9,7 @@ class Controls {
   }
 
   #addKeyboardListeners() {
-    window.onkeydown = (keyboardEvent) => {
+    window.addEventListener("keydown", (keyboardEvent) => {
       switch (keyboardEvent.key) {
         case "ArrowUp":
           this.forward = true;
@@ -24,9 +24,9 @@ class Controls {
           this.reverse = true;
           break;
       }
-    };
+    });
 
-    window.onkeyup = (keyboardEvent) => {
+    window.addEventListener("keyup", (keyboardEvent) => {
       switch (keyboardEvent.key) {
         case "ArrowUp":
           this.forward = false;
@@ -41,6 +41,6 @@ class Controls {
           this.reverse = false;
           break;
       }
-    };
+    });
   }
 }
